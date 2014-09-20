@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="client.master.cs" Inherits="BTL_CSDL.client" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cây thuốc Việt Nam</title>
+    <link href="css/main.min.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table width="1000" border="0" align="center" class="main">
+                <tbody>
+                    <tr>
+                        <td>
+                            <nav>
+                                <ul>
+                                    <li><a href="index.aspx">Trang Chủ</a></li>
+                                    <li><a href="gioithieu.aspx">Giới Thiệu</a></li>
+                                    <li><a href="caythuoc.aspx">Cây Thuốc</a></li>
+                                    <li><a href="lienhe.aspx">Liên Hệ</a></li>
+                                    <li><a href="search-anh.aspx">Search theo Ảnh</a></li>
+                                </ul>
+                            </nav>
+                        </td>
+                    </tr>
+                    <!--End Navigator -->
+                    <tr>
+                        <td>
+                            <div style="width: 250px; float: left;">
+                                <div class="head">
+                                    <h1>Cây Thuốc</h1>
+                                    <a href="index.aspx" class="big" title="Cay thuoc">Cây thuốc</a><br>
+                                    <b>Cây thuốc Việt Nam</b>
+                                </div>
+                            </div>
+                            <div style="width: 700px; float: right; margin-right: 20px;">
+                                <form action="#" method="GET" id="searchform">
+                                    <table align="center" style="font-size: 12px">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="12">
+                                                    <asp:TextBox CssClass="q"  runat="server" ID="txtSearch"/>
+                                                </td>
+                                                <td>
+                                                    <asp:Button runat="server" Text="Tìm Kiếm" ID="btnSearch" OnClick="btnSearch_Click" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="200"><b>Tìm kiếm cây thuốc theo:</b></td>
+                                                <td width="15" align="center">
+                                                    <asp:RadioButton runat="server" GroupName="search" ID="checkboxCaythuoc" Checked="true" />
+                                                </td>
+                                                <td width="100">Tên cây thuốc</td>
+                                                <td width="15" align="center">
+                                                    <asp:RadioButton runat="server" GroupName="search" ID="checkboxHoCayThuoc" Checked="false" /></td>
+                                                <td width="100">Họ cây thuốc</td>
+                                                <td width="15" align="center">
+                                                    <asp:RadioButton runat="server" GroupName="search" ID="checkboxBaiThuoc" Checked="false" /></td>
+                                                <td width="100">Bài thuốc</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- End Search Bar -->
+
+                    <!-- Start Content-->
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <!-- End Content -->
+                    <tr>
+                        <td align="center" style="padding-top: 20px; padding-bottom: 20px;">
+                            <small style="font-size: 11px; color: #555;">Sản phẩm được thiết kế bởi Phan Đình San - Nhóm 1 - Lớp Cơ Sở Dữ Liệu. Nghiêm cấm mọi hành vi vi phạm bản quyền! :)</small><br>
+                            <b class="copy">Tìm kiếm cây thuốc Việt Nam</b><br>
+                            <a href="#" title="Cay thuoc Viet nam" class="copy">Nhóm 1</a> <b class="copy">© 2014</b><br />
+                            <a href="admin/LOGIN.aspx">Trang Quản Lý</a>
+                        </td>
+                    </tr>
+                    <!-- End Footer -->
+                </tbody>
+            </table>
+
+        </div>
+    </form>
+</body>
+</html>
